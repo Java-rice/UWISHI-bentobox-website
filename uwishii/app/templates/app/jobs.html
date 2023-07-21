@@ -1,0 +1,23 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}Jobs{%endblock title%}
+
+{% block main-content %}
+    <div id="bar"><br><br></div>
+        <div class="content-column-center" id="jobscontent">
+            <div id="jobstext">
+                <div>
+                    <h2>EXCITING OPPORTUNITIES AWAITS</h2>
+                    <h1>Calling all culinary enthusiasts, servers, and speedy riders!</h1>
+                </div>
+                <div>
+                    <p>If you thrive in the lively ambiance of a bustling diner and understand the value of extraordinary hospitality, we have a proposition for you.
+                        <br><br>We're seeking individuals who can keep up with our fast-paced environment, delivering exceptional service with a side of humor. Together, let's spread the thrill of crafting and relishing delectable personalized bento boxes, right at our customers' doorsteps.
+                        <br><br>Join us today and embark on a culinary adventure where cultural appreciation meets customer satisfaction, one delightful bite at a time.</p>
+                </div>
+                <button type="submit" id="jobapplication"><a href = "mailto: abc@example.com">EMAIL US YOUR RESUME AND DETAILS</a></button>
+            </div>
+            <img src={% static 'app/images/banners/jobs.jpg'%} id="jobsimage">
+        </div>
+    </div>
+{% endblock main-content %}

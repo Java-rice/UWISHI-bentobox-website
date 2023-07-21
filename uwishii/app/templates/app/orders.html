@@ -1,0 +1,46 @@
+{% extends 'app/index.html' %}
+{% load static %}
+
+{% block title %}Orders{% endblock title %}
+
+{% block main-content %}
+    <div id="shop-maintitle">
+        <h1 id="shoptitle">Your Orders</h1>
+    </div>
+    <div class="tablecontainer">
+        <div class="orders-main-container">
+            <table class="table table-hover">
+                <tr class="bg-warning">>
+                    <th>Set</th>
+                    <th>Rice</th>
+                    <th>Main Dish</th>
+                    <th>Side Dish</th>
+                    <th>Second Side Dish</th>
+                    <th>Dessert</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+                {% for order in status %}
+                <tr>
+                    <td class="table-warning">{{ order.set }}</td>
+                    <td class="table-warning">{{ order.rice }}</td>
+                    <td class="table-warning">{{ order.main_dish }}</td>
+                    <td class="table-warning">{{ order.side_dish }}</td>
+                    {%if order.set == 'GOSET'%}
+                        <td class="table-warning">{{ order.second_side_dish }}</td>
+                        <td class="table-warning">{{ order.dessert }}</td>
+                    {%elif order.set == 'SANSET'%}
+                        <td class="table-warning">None</td>
+                        <td class="table-warning">None</td>
+                    {%elif order.set == 'YONSET'%}
+                        <td class="table-warning">{{ order.second_side_dish }}</td>
+                        <td class="table-warning">None</td>
+                    {%endif%}
+                    <td class="table-warning">{{ order.price }}</td>
+                    <td class="table-warning">{{ order.status }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock main-content %}

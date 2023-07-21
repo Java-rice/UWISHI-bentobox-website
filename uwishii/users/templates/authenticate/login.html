@@ -1,0 +1,26 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}Login{%endblock title%}
+{% block login %}
+    <div class="main-user-container">
+        <div class="user-container">
+            <div class="form-div">
+                <form action = "" method=POST class="user-form">
+                    {%csrf_token%}
+                    <img src="{% static 'app/images/banners/loginlogo.png'%}" alt = "login-logo">
+                    <div class='login-details'>
+                        <label for="username" class="form-label">Username</label>
+                        <input class="user-input" type="text" id="username" name="username">
+                    </div>
+                    <div class='login-details'>
+                        <label for="loginpassword" class="form-label">Password</label>
+                        <input class="user-input" type="password" id="loginpassword" name="password">
+                    </div>
+                    <button type="submit" id="loginpagebutton">LOGIN</button>
+                    <p>Don’t have an account?<b><a href="{% url "register_user"%}"> Sign up</a></b></p>
+                </form>
+            </div>
+            <img src="{% static 'app/images/banners/bgimage.png'%}" alt = "bg-logo">
+        </div>
+    </div>
+{% endblock login %}

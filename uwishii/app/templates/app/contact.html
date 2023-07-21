@@ -1,0 +1,53 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}Contact{%endblock title%}
+
+{% block main-content %}
+    <div class="content-column-center" id="contus">
+        <h1>Contact Us</h1>
+        <p>We take great pleasure in providing you with a high-quality and convenient service at any time; should you have any concerns or wish to share your feedback on our exquisite Japanese to-go bento boxes, please do not hesitate to contact UWI-SHII using the provided information below.</p>
+        <div>
+            <div class="contact-items">
+                <img src = {% static 'app/images/banners/address.png'%}>
+                <div>
+                    <h3>ADDRESS</h3>
+                    <p>2989 Recto Ave, Sampaloc, Manila, 1008 Metro Manila</p>
+                </div>
+            </div>
+            <div class="contact-items">
+                <img src = {% static 'app/images/banners/telephone.png'%}>
+                <div>
+                    <h3>TELEPHONE NUMBER</h3>
+                    <p>(02) 153-6458</p>
+                </div>
+            </div>
+            <div class="contact-items">
+                <img src = {% static 'app/images/banners/email.png'%}>
+                <div>
+                    <h3>EMAIL</h3>
+                    <p>uwishii.bentobox@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-items">
+                <img src = {% static 'app/images/banners/phone.png'%}>
+                <div>
+                    <h3>PHONE NUMBER</h3>
+                    <p>(+63) 958-643-6587</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src = {% static 'app/images/banners/contactpic.png'%}>
+    <div class="content-column-center" id="contact-form">
+        <div>
+            <img img src = {% static 'app/images/banners/logoframe.png'%}>
+        </div>
+        <form id="cform" action="https://formsubmit.co/u" method="POST">
+            <h2> We Can Hear You </h2>
+            <input class="contact-input" type="text" id="name" name="name" placeholder = "Your name" required>
+            <input class="contact-input" type="email" id="name" name="email" placeholder = "Your email" requried>
+            <textarea id="" name="" rows="4" cols="50" class="contact-input" placeholder="Your feedback..." required></textarea>
+            <button type="submit">SEND US YOUR FEEDBACK</button>
+        </form>
+    </div>
+{% endblock main-content %}

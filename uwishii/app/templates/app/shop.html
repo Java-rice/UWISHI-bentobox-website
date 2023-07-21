@@ -1,0 +1,349 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}Shop{%endblock title%}
+
+{% block main-content %}
+    <form id="shopcontainer" method=POST action = "">
+        {% csrf_token %}
+        <div id="shop-maintitle">
+            <h1 id="shoptitle"> Build Your Own Bento Box! </h1>
+        </div>
+        <div id="shop-sections">
+            <h2>1. SELECT A SET</h2>
+        </div>
+        <div class="menu-container" id="main-choices">
+            <input type="radio" name="set" id="GOSET" class="input-hidden" value="GOSET"/>
+            <label for="GOSET">
+                <div class="label-items">
+                    <img src={%static 'app/images/banners/GOSET.png'%} alt="GOSET" />
+                    <h4> GO Set </h4>
+                    <h6>PHP 200.00</h6>
+                    <p>Rice, 1 Main Dish, 2 Side Dish, 1 Dessert</p> 
+                </div>
+            </label>
+            <input type="radio" name="set" id="SANSET" class="input-hidden" value="SANSET" />
+            <label for="SANSET">
+                <div class="label-items">
+                    <img src={%static 'app/images/banners/SANSET.png'%} alt="SANSET" />
+                    <h4> SAN Set </h4>
+                    <h6>PHP 150.00</h6>
+                    <p>Rice, 1 Main Dish, 1 Side Dish</p> 
+                </div>
+            </label>
+            <input type="radio" name="set" id="YONSET" class="input-hidden" value="YONSET" />
+            <label for="YONSET">
+                <div class="label-items">
+                    <img src={%static 'app/images/banners/YONSET.png'%} alt="YONSET" />
+                    <h4> YON Set </h4>
+                    <h6>PHP 175.00</h6>
+                    <p>Rice, 1 Main Dish, 2 Side Dish</p> 
+                </div>
+            </label>
+        </div>
+        <div id="shop-sections">
+            <h2>2. CUSTOMIZE YOUR MEAL</h2>
+        </div>
+        <div class="shop-containers">
+            <div class="sub-sections"><h2>RICE</h2></div>
+            <div class="menu-container">
+                <div class="shop-items">
+                    <input type="radio" name="rice" id="plain" value="Plain Rice">
+                    <label for="plain">Plain Rice<br><i>(INCLUDED)</i></label>
+                </div>
+                <div class="shop-items">
+                    <input type="radio" name="rice" id="fried" value="Fried Rice">
+                    <label for="fried">Fried Rice<br><i>(PHP 10.00)</i></label>
+                </div>
+                <div class="shop-items">
+                    <input type="radio" name="rice" id="java" value="Java Rice">
+                    <label for="java">Java Rice<br><i>(PHP 10.00)</i></label>
+                </div>
+                <div class="shop-items">
+                    <input type="radio" name="rice" id="hijiki" value="Hijiki Rice">
+                    <label for="hijiki">Hijiki Rice<br><i>(PHP 10.00)</i></label>
+                </div>    
+            </div>
+        </div>
+        <div class="shop-containers" id="md">
+            <div class="sub-sections"><h2>MAIN DISH</h2></div>
+            <div class="menu-container">
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Tonkatsu" value="Tonkatsu">
+                        <label for="Tonkatsu">Tonkatsu</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Chicken_Karaage" value="Chicken Karaage">
+                        <label for="Chicken_Karaage">Chicken Karaage</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Yakisoba" value="Yakisoba">
+                        <label for="Yakisoba">Yakisoba</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Ebi_Tempura" value="Ebi Tempura">
+                        <label for="Ebi_Tempura">Ebi Tempura</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Sakana_Fry" value="Sakana Fry">
+                        <label for="Sakana_Fry">Sakana Fry</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Chicken_Teriyaki" value="Chicken Teriyaki">
+                        <label for="Chicken_Teriyaki">Chicken Teriyaki</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Beef_Yakiniku" value="Beef Yakiniku">
+                        <label for="Beef_Yakiniku">Beef Yakiniku</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Pork_Katsu" value="Pork Katsu">
+                        <label for="Pork_Katsu">Pork Katsu</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Salmon_Teriyaki" value="Salmon Teriyaki">
+                        <label for="Salmon_Teriyaki">Salmon Teriyaki</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Beef_Misono" value="Beef Misono">
+                        <label for="Beef_Misono">Beef Misono</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Yakitori" value="Yakitori">
+                        <label for="Yakitori">Yakitori</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Chicken_Tocino" value="Chicken Tocino">
+                        <label for="Chicken_Tocino">Chicken Tocino</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Pork_Tocino" value="Pork Tocino">
+                        <label for="Pork_Tocino">Pork Tocino</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Hamonado_Longganisa" value="Hamonado Longganisa">
+                        <label for="Hamonado_Longganisa">Hamonado Longganisa</label>
+                    </div> 
+                    <div class="shop-items">
+                        <input type="radio" name="main_dish" id="Pork_BBQ" value="Pork BBQ">
+                        <label for="Pork_BBQ">Pork BBQ</label>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="shop-containers" id="sd">
+            <div class="sub-sections"><h2>SIDE DISH</h2></div>
+            <div class="menu-container">
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Mixed_Veggies" value="Mixed Veggies">
+                        <label for="Mixed_Veggies">Mixed Veggies</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Rolled_Omelette" value="Rolled Omelette">
+                        <label for="Rolled_Omelette">Rolled Omelette</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Seaweed_Salad" value="Seaweed Salad">
+                        <label for="Seaweed_Salad">Seaweed Salad</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Braised_Burdock_Root" value="Braised Burdock Root">
+                        <label for="Braised_Burdock_Root">Braised Burdock Root</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Miso_Glazed_Eggplant" value="Miso Glazed Eggplant">
+                        <label for="Miso_Glazed_Eggplant">Miso Glazed Eggplant</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Dumplings" value="Dumplings">
+                        <label for="Dumplings">Dumplings</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Steamed_Soybeans" value="Steamed Soybeans">
+                        <label for="Steamed_Soybeans">Steamed Soybeans</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Deep-Fried_Tofu" value="Deep-Fried Tofu">
+                        <label for="Deep-Fried_Tofu">Deep-Fried Tofu</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Octupus_Balls" value="Octupus Balls">
+                        <label for="Octupus_Balls">Octupus Balls</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Japanese_Rolled_Omelette" value="Japanese Rolled Omelette">
+                        <label for="Japanese_Rolled_Omelette">Japanese Rolled Omelette</label><br>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Croquette" value="Croquette">
+                        <label for="Croquette">Croquette</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Cucumber_Salad" value="Cucumber Salad">
+                        <label for="Cucumber_Salad">Cucumber Salad</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Savory_Egg_Custard" value="Savory Egg Custard">
+                        <label for="Savory_Egg_Custard">Savory Egg Custard</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Scattered_Sushi" value="Scattered Sushi">
+                        <label for="Scattered_Sushi">Scattered Sushi</label>
+                    </div> 
+                    <div class="shop-items">
+                        <input type="radio" name="side_dish" id="Japanese_Pickles" value="Japanese Pickles">
+                        <label for="Japanese_Pickles">Japanese Pickles</label>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="shop-containers" id="ssd">
+            <div class="sub-sections"><h2>SECOND SIDE DISH</h2></div>
+            <div class="menu-container">
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Tonkatsu" value="Tonkatsu">
+                        <label for="second-Tonkatsu">Mixed Veggies</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Rolled_Omelette" value="Rolled Omelette">
+                        <label for="second-Rolled_Omelette">Rolled Omelette</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Seaweed_Salad" value="Seaweed Salad">
+                        <label for="second-Seaweed_Salad">Seaweed Salad</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Braised_Burdock_Root" value="Braised Burdock Root">
+                        <label for="second-Braised_Burdock_Root">Braised Burdock Root</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Miso_Glazed_Eggplant" value="Miso Glazed Eggplant">
+                        <label for="second-Miso_Glazed_Eggplant">Miso Glazed Eggplant</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Dumplings" value="Dumplings">
+                        <label for="second-Dumplings">Dumplings</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Steamed_Soybeans" value="Steamed Soybeans">
+                        <label for="second-Steamed_Soybeans">Steamed Soybeans</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Deep-Fried_Tofu" value="Deep-Fried Tofu">
+                        <label for="second-Deep-Fried_Tofu">Deep-Fried Tofu</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Octupus_Balls" value="Octupus Balls">
+                        <label for="second-Octupus_Balls">Octupus Balls</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Japanese_Rolled_Omelette" value="Japanese Rolled Omelette">
+                        <label for="second-Japanese_Rolled_Omelette">Japanese Rolled Omelette</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Croquette" value="Croquette">
+                        <label for="second-Croquette">Croquette</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Cucumber_Salad" value="Cucumber Salad">
+                        <label for="second-Cucumber_Salad">Cucumber Salad</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Savory_Egg_Custard" value="Savory Egg Custard">
+                        <label for="second-Savory_Egg_Custard">Savory Egg Custard</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Scattered_Sushi" value="Scattered Sushi">
+                        <label for="second-Scattered_Sushi">Scattered Sushi</label>
+                    </div> 
+                    <div class="shop-items">
+                        <input type="radio" name="second_side_dish" id="second-Japanese_Pickles" value="Japanese Pickles">
+                        <label for="second-Japanese_Pickles">Japanese Pickles</label>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="shop-containers " id="ds">
+            <div class="sub-sections"><h2>DESSERT</h2></div>
+            <div class="menu-container">
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Biscuit_Sticks" value="Biscuit Sticks">
+                        <label for="Biscuit_Sticks">Biscuit Sticks</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Fish-shaped_Cake" value="Fish-shaped Cake">
+                        <label for="Fish-shaped_Cake">Fish-shaped Cake</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Sweet_Jelly_with_Fruits" value="Sweet Jelly with Fruits">
+                        <label for="Sweet_Jelly_with_Fruits">Sweet Jelly with Fruits</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Green_Tea_Kit_Kat" value="Green Tea Kit Kat">
+                        <label for="Green_Tea_Kit_Kat">Green Tea Kit Kat</label>
+                    </div> 
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Fruit_Jelly" value="Fruit_Jelly">
+                        <label for="Fruit_Jelly">Fruit Jelly</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Matcha_Cookies" value="Matcha Cookies">
+                        <label for="Matcha_Cookies">Matcha Cookies</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Bracken_Starch_Jelly" value="Bracken Starch Jelly">
+                        <label for="Bracken_Starch_Jelly">Bracken Starch Jelly</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Miso_Butter_Cookies" value="Miso Butter Cookies">
+                        <label for="Miso_Butter_Cookies">Miso Butter Cookies</label>
+                    </div>    
+                </div>
+                <div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Cucumber_Salad" value="Cucumber Salad">
+                        <label for="Rice_Cake">Cucumber Salad</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Fresh_Fruits" value="Fresh Fruits">
+                        <label for="Fresh_Fruits">Fresh Fruits</label>
+                    </div>
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Red_Bean_Jelly" value="Red Bean Jelly">
+                        <label for="Red_Bean_Jelly">Red Bean Jelly</label>
+                    </div> 
+                    <div class="shop-items">
+                        <input type="radio" name="dessert" id="Pancake_with_Sweet_Filling" value="Pancake with Sweet Filling">
+                        <label for="Pancake_with_Sweet_Filling">Pancake with Sweet Filling</label>
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div id="hr"></div>
+        <div id="shop-message">
+            <p>Have Fun Ordering!<p>
+        </div>
+        <div id="two-shop-buttons">
+            <button class="shopbutton" type="submit" value="submit">ADD TO CART</button>
+            <button class="shopbutton"><a href={% url 'cart'%}>REVIEW CART</a></button>    
+        </div>
+    </form>
+{% endblock main-content %}

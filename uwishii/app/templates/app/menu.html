@@ -1,0 +1,104 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}Menu{%endblock title%}
+
+{% block main-content %}
+    <div id="mainmenu" class="seccontent">
+        <h1>MENU</h1>
+        <div id="mainmenu-content">
+            <div class="menu-serve-items">
+                <img src={%static 'app/images/banners/GOSET.png'%}>
+                <div class="menu-items-text">
+                    <h2>GO Set</h2>
+                    <p>Rice, 1 Main Dish, 2 Side Dish, 1 Condiment</p>
+                </div>
+            </div>
+            <div class="menu-serve-items">
+                <img src={%static 'app/images/banners/SANSET.png'%}>
+                <div class="menu-items-text">
+                    <h2>SAN Set</h2>
+                    <p>Rice, 1 Main Dish, 1 Side Dish</p>
+                </div>
+            </div>
+            <div class="menu-serve-items">
+                <img src={%static 'app/images/banners/YONSET.png'%}>
+                <div class="menu-items-text">
+                    <h2>YON Set</h2>
+                    <p>Rice, 1 Main Dish, 2 Side Dish</p>
+                </div>
+            </div>
+        </div>
+        <button type="submit" id="OrderOnline"><a 
+        {% if user.is_authenticated %}
+            href={% url "shop"%}
+        {% else %}
+            href={% url "login"%}   
+        {% endif %}>ORDER NOW </a></button>
+    </div>
+    <div id="menudishes" class="seccontent">
+        <div class="dishes">
+            <h1>Main Dish</h1>
+            <ul>
+                <li>Chicken Teriyaki</li>
+                <li>Beef Yakiniku</li>
+                <li>Pork Katsu</li>
+                <li>Salmon Teriyaki</li>
+                <li>Beef Misono</li>
+                <li>Tonkatsu</li>
+                <li>Chicken Karaage</li>
+                <li>Yakisoba</li> 
+                <li>Ebi Tempura</li>
+                <li>Sakana Fry</li> 
+                <li>Yakitori</li>
+                <li>Chicken Tocino</li>
+                <li>Chicken Teriyaki</li>
+                <li>Pork Tocino</li>
+                <li>Hamonado Longganisa</li>
+                <li>Pork BBQ</li>
+            </ul>
+        </div>
+        <div id="br"> </div>
+        <div class="dishes">
+            <h1>Side Dish</h1>
+            <ul>
+                <li>Japanese Rolled Omelette</li>
+                <li>Dumplings</li>
+                <li>Steamed Soybeans</li>
+                <li>Deep-Fried Tofu</li>
+                <li>Octopus Balls</li>
+                <li>Mxed Veggies</li>
+                <li>Rolled Omelette</li>
+                <li>Seaweed Salad</li>
+                <li>Braised Burdock Root</li>
+                <li>Miso-Glazed Eggplant</li>
+                <li>Croquette</li>
+                <li>Cucumber Salad</li>
+                <li>Savory Egg Custard</li>
+                <li>Scattered Sushi</li>
+                <li>Japanese Pickles</li>
+            </ul>
+        </div>
+        <div id="br"> </div>
+        <div class="dishes">
+            <h1>Desserts</h1>
+            <ul>
+                <li>Rice Cake</li>
+                <li>Fresh Fruits</li>
+                <li>Red Bean Jelly</li>
+                <li>Pancake with Sweet Filling</li>
+                <li>Biscuit Sticks</li>
+                <li>Fish-shaped Cake</li>
+                <li>Sweet Jelly with Fruits</li>
+                <li>Green Tea Kit Kat</li>
+                <li>Bracken Starch Jelly</li>
+                <li>Fruit Jelly</li>
+                <li>Matcha Cookies</li>
+                <li>Miso Butter Cookies</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+{% endblock main-content %}

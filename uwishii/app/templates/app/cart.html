@@ -1,0 +1,55 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block title %}Cart{% endblock title %}
+
+{% block main-content %}
+    <div id="shop-maintitle">
+        <h1 id="shoptitle">Review Cart</h1>
+    </div>
+    <div class="cart-main-container">
+        {% for order in orders %}
+            <div class="cartcont">
+                <div class="order-image">
+                    {%if order.set == "GOSET"%}
+                    <img src={%static 'app/images/banners/GOSET.png'%} alt="GOSET" />
+                    <h2>GO Set</h2>
+                    {% elif order.set == "YONSET"%}
+                    <img src={%static 'app/images/banners/YONSET.png'%} alt="YONSET" />
+                    <h2>YON Set</h2>
+                    {%else%}
+                    <img src={%static 'app/images/banners/SANSET.png'%} alt="SANSET" />
+                    <h2>SAN Set</h2>
+                    {%endif%}
+                </div>
+                <div class="order-details">
+                    {%if order.set == "GOSET"%}
+                    <p>{{ order.rice }}</p>
+                    <p>{{ order.main_dish }}</p>
+                    <p>{{ order.side_dish }} + {{ order.second_side_dish }}</p>
+                    <p>{{ order.dessert }}</p>
+                    <p><b>PHP {{ order.price }}</b></p>
+                    <button class="delete-button" data-order-id="{{ order.id }}">Remove</button>
+                    {% elif order.set == "YONSET"%}
+                    <p>{{ order.rice }}</p>
+                    <p>{{ order.main_dish }}</p>
+                    <p>{{ order.side_dish }} + {{ order.second_side_dish }}</p>
+                    <p><b>PHP {{ order.price }}</b></p>
+                    <button class="delete-button" data-order-id="{{ order.id }}">Remove</button>
+                    {%else%}
+                    <p>{{ order.rice }}</p>
+                    <p>{{ order.main_dish }}</p>
+                    <p>{{ order.side_dish }}</p>
+                    <p><b>PHP {{ order.price }}</b></p>
+                    <button class="delete-button" data-order-id="{{ order.id }}">Remove</button>
+                    {%endif%}
+                </div>
+            </div>
+        {% endfor %}
+        <p id="total_price">Total Price: <b>{{ total_price }}</b></p>
+        <form action="{% url 'add_status' %}" method=POST>
+            {% csrf_token %}
+            <!-- Your form fields and content go here, if any -->
+            <button type="submit" class='shopbutton'>PLACE ORDER</button>
+        </form>
+    </div>
+{% endblock main-content %}

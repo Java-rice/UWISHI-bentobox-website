@@ -1,0 +1,43 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{%block title %}About{%endblock title%}
+
+{% block main-content %}
+    <div class="content-column-center" id="aboutus">
+        <h2>About us</h2>
+        <p>Uwi-Shi celebrates the fusion of Japanese and Filipino cultures, infusing the elegance and precision of Japanese cuisine with the warmth and comfort of Filipino flavors.</p>
+    </div>
+    <div class="content-column-center" id="our-mission">
+        <h1>Our Mission</h1>
+        <p>To bring the joy of creating and savoring delicious make-your-own bento boxes to our customer's homes. Combining the essence of Japanese culinary excellence and the warmth of Filipino hospitality, we aim to provide a seamless e-commerce experience that offers a wide variety of fresh ingredients and allows individuals to customize their bento boxes to their liking. Through our reliable delivery and convenient pick-up services, we strive to make the process of enjoying a delectable and personalized bento box a delightful and accessible experience for everyone. We are dedicated to fostering a sense of culinary adventure, promoting cultural appreciation, and ensuring customer satisfaction in every bite.</p>
+    </div>
+    <div class="content-column-center" id="the-background">
+        <h2>Background</h2>
+        <p>Uwi-Shi is founded on the belief that food should be both delicious and customizable to suit individual preferences. The concept was inspired by the rich culinary traditions of Japan and the Philippines, two cultures renowned for their flavorful and diverse cuisines. The founders recognized the growing demand for convenient and personalized dining experiences, especially in urban areas where people lead busy lives.</p>
+    </div>
+    <div class="content-column-center" id="founders">
+        <h1>Meet the Founders</h1>
+        <div id="image-container">
+            <div class="f">
+                <img src="{% static 'app/images/banners/zen.png'%}" alt="Zen Ubungen">
+                <p class="name">Zen Ubungen</p>
+                <p>CEO</p>
+            </div>
+            <div class="f">
+                <img src="{% static 'app/images/banners/jm.png'%}" alt="John Peroche">
+                <p class="name">John Peroche</p>
+                <p>CEO</p>
+            </div>
+        </div>
+        <p>At Uwi-Shi, we understand that life can get busy, and finding time to savor a delicious, personalized meal can sometimes be a challenge. That's why we have carefully curated our services to ensure that you can enjoy our handcrafted bento boxes at your convenience, whether you prefer to pick them up or have them delivered right to your doorstep.</p>
+        <p>Our commitment to providing an extraordinary dining experience remains unwavering. Our team of talented chefs and artisans pour their passion and expertise into every bento box we create. We believe that a truly memorable meal is a fusion of taste, presentation, and convenience. With Uwi-Shi, you can have it all.</p>
+        <p>To make your experience seamless, we offer two convenient options:</p>
+        <p>Pick-up: Our pick-up service allows you to swing by our Uwi-Shi location and collect your customized bento box at a time that suits you best. We have designed our pick-up process to be quick and hassle-free, ensuring that you can enjoy your culinary masterpiece on your terms.
+            Delivery: We understand the joy of having a delectable meal delivered to your doorstep, and we are pleased to offer delivery services for your convenience. Simply place your order online through our user-friendly website, and our dedicated delivery partners will ensure that your customized bento box arrives promptly and in perfect condition.</p>
+        <p>No matter which option you choose, rest assured that the same level of attention and care goes into preparing and packaging your bento box. We use only the freshest ingredients, expertly selected to ensure an explosion of flavors with each bite. Our commitment to customization remains at the forefront, allowing you to personalize your bento box according to your preferences and dietary requirements.</p>
+        <p>Thank you for choosing Uwi-Shi as your partner in elevating your dining experience. We are thrilled to embark on this flavorful journey with you and look forward to serving you soon.</p>
+        
+    </div>
+
+
+{% endblock main-content %}
