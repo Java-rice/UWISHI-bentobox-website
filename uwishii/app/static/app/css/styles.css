@@ -600,8 +600,7 @@ main{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
-    min-height: 800px;
+    min-height: 1000px;
     gap: 20px;
 }
 
@@ -661,8 +660,8 @@ main{
 }
 
 #jobapplication:hover{
-    border: 2px solid #3C2A21;
-    background-color: #D9D9D9;
+    border: 3px solid #3C2A21;
+    background-color: #D5CEA3;
     font-weight: 800;
     color: #3C2A21;
     transition: 0.1s ease;
@@ -1493,6 +1492,10 @@ table tr td{
 
 @media (max-width: 1255px) {
     
+    #our-mission p{
+        text-align: center;
+    }
+
     #header .navbar{
         position: absolute;
         top: 100%; right: -110%;
@@ -1640,7 +1643,10 @@ table tr td{
         flex-direction: column;
         gap: 5px;
     }
-
+    .form-control{
+        height: 20px;
+        font-size: 16px;
+    }
 }
 
 

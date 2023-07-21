@@ -33,7 +33,11 @@
             </ul>
             <div class="icons">
                 <div class="fas fa-bars" id="menu-btn"></div>
-                <a href="{% url 'cart'%}"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+                <a {% if user.is_authenticated %}
+                    href="{% url "cart"%}"
+                {% else %}
+                    href="{% url "login"%}"   
+                {% endif %}"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
                 {% if user.is_authenticated %}
                     <button type="submit" id="loginbutton"><a href="{% url 'logout'%}">LOGOUT</a></button>
                 {% else %}

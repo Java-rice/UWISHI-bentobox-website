@@ -69,5 +69,5 @@ document.addEventListener('DOMContentLoaded', function() {
       if (parts.length === 2) return parts.pop().split(';').shift();
     }
   });
-}
+
 
