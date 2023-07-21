@@ -1,0 +1,16 @@
+asgiref==3.7.2
+Babel==2.12.1
+bcrypt==4.0.1
+customtkinter==5.2.0
+darkdetect==0.8.0
+distlib==0.3.6
+Django==4.2.3
+filelock==3.12.2
+Pillow==10.0.0
+platformdirs==3.8.0
+sqlparse==0.4.4
+tkcalendar==1.6.1
+tkTimePicker==2.0.2
+ttkbootstrap==1.10.1
+tzdata==2023.3
+virtualenv==20.23.1

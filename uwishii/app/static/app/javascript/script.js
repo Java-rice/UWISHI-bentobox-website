@@ -33,34 +33,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const deleteButtons = document.querySelectorAll('.delete-button');
+document.addEventListener('DOMContentLoaded', function() {
+  const deleteButtons = document.querySelectorAll('.delete-button');
 
-    deleteButtons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        const orderId = this.getAttribute('data-order-id');
-        deleteOrder(orderId);
-      });
+  deleteButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const orderId = this.getAttribute('data-order-id');
+      deleteOrder(orderId);
     });
+  });
 
-    function deleteOrder(orderId) {
-      const csrfToken = getCookie('csrftoken'); // Function to get the CSRF token from cookies
+  function deleteOrder(orderId) {
+    const csrfToken = getCookie('csrftoken'); // Function to get the CSRF token from cookies
 
-      fetch(`/delete_order/${orderId}/`, {
-        method: 'DELETE',
-        headers: {
-          'X-CSRFToken': csrfToken, // Include the CSRF token in the headers
-        },
-      })
-      .then(response => {
-        if (response.ok) {
-          window.location.reload();
-        } else {
-          console.error('Failed to delete the order.');
-        }
-      })
-      .catch(error => console.error('Error during the delete request:', error));
-    }
+    fetch(`/delete_order/${orderId}/`, {
+      method: 'DELETE',
+      headers: {
+        'X-CSRFToken': csrfToken, // Include the CSRF token in the headers
+      },
+    })
+    .then(response => {
+      if (response.ok) {
+         window.location.reload();
+      } else {
+        console.error('Failed to delete the order.');
+      }
+    })
+    .catch(error => console.error('Error during the delete request:', error));
+  }
 
     // Function to get the CSRF token from cookies
     function getCookie(name) {

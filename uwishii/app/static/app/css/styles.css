@@ -1643,10 +1643,6 @@ table tr td{
         flex-direction: column;
         gap: 5px;
     }
-    .form-control{
-        height: 20px;
-        font-size: 16px;
-    }
 }
 
 

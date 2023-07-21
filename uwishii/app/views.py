@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from .models import Order
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
@@ -21,6 +20,19 @@ def jobs(request):
 
 def contact(request):
     return render(request,'app/contact.html')
+
+def delete_order(request, order_id):
+    # Get the order instance to be deleted
+    order = get_object_or_404(Order, id=order_id)
+
+    # Check if the user owns the order before deleting (optional, if needed)
+    if order.user != request.user:
+        return JsonResponse({'error': 'You are not authorized to delete this order.'}, status=403)
+
+    # Delete the order
+    order.delete()
+
+    return JsonResponse({'message': 'Order deleted successfully.'})
 
 
 def shop(request):
