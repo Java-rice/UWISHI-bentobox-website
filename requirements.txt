@@ -6,7 +6,7 @@ darkdetect==0.8.0
 distlib==0.3.6
 Django
 filelock==3.12.2
-Pillow==10.0.0
+Pillow
 platformdirs==3.8.0
 sqlparse==0.4.4
 tkcalendar==1.6.1
