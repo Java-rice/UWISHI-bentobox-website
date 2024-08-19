@@ -1,4 +1,4 @@
-# UWI-SHI - CRAVE, CREATE and ENJOY
+<h1>UWI-SHI - CRAVE, CREATE and ENJOY</h1>
 <i>A Project for completion of COSC-FE2 - CS Free Elective 2 (E-Commerce)</i>
 
 ### Description:
@@ -28,13 +28,13 @@
 ### Screenshots:
 
 <p align="center">
-####  HomePage
-![Home Page](./img/HOME.png "Home Page")
-####  ADD to CART
-![Add to Cart Page](./img//CART_%20ADD.png "Add to Cart")
-####  REVIEW CART
-![Review Cart Page](./img//CART_%20REVIEW.png "Review Cart")
-####  AboutPage
-![About Page](./img/ABOUT.png "About Page")
+    <h4 align="center">HOME Page</h4>
+    <img src="./img/HOME.png" alt="Home Page")/>
+    <h4 align="center">ADD to CART</h4>
+    <img src="./img//CART_%20ADD.png" alt="Add to Cart Page")/>
+    <h4 align="center">REVIEW CART</h4>
+    <img src="./img//CART_%20REVIEW.png" alt="Review Cart Page")/>
+    <h4 align="center">ABOUT Page</h4>
+    <img src="./img/ABOUT.png" alt="About Page")/>
 </p>
 
