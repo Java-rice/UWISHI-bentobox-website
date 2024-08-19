@@ -18,8 +18,8 @@
 
 ### Collaborators:
 
-- John Mark Peroche
-- Zen Desiree Ubungen 
+- [John Mark Peroche](https://github.com/Java-rice)
+- [Zen Desiree Ubungen](https://github.com/zxnoia)
 
 ### Tools:
 - Django
