@@ -16,8 +16,6 @@ class RegisterUserForm(UserCreationForm):
     contact = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control',
         'style': 'border: 4px solid #703C22; color:#1A120B;  padding: 5px; height: 50px; background: transparent; font-size: 16px; width: 100%;',}))
     
-    
-    
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'address', 'contact')

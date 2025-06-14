@@ -1,0 +1,15 @@
+# Byte-compiled / cache files
+__pycache__/
+
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+
